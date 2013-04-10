@@ -1,3 +1,5 @@
-assets/
-protected/runtime/
-themes/classic/views/
+.idea/
+app/assets/
+app/protected/runtime/
+app/themes/classic/views/
+composer.phar
