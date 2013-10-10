@@ -1,5 +1,7 @@
-.idea/
-app/assets/
-app/protected/runtime/
-app/themes/classic/views/
-composer.phar
+/.idea/
+/assets/
+/protected/runtime/
+/themes/classic/views/
+/composer.phar
+/composer.lock
+

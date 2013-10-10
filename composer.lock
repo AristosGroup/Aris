@@ -3,29 +3,118 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1b0eecdd770ce780cc2356eb45cff539",
+    "hash": "27cd9fcf2a12cebb2ce10bf38c89c529",
     "packages": [
         {
-            "name": "yiisoft/yii",
-            "version": "dev-master",
+            "name": "ezyang/htmlpurifier",
+            "version": "v4.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yiisoft/yii.git",
-                "reference": "f99c4db1aa51b42b0c059b654bbb0a4aab17c8b3"
+                "url": "https://github.com/ezyang/htmlpurifier.git",
+                "reference": "d516e2f8de435ea78cc6152abc425d3ff2c4d289"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii/zipball/f99c4db1aa51b42b0c059b654bbb0a4aab17c8b3",
-                "reference": "f99c4db1aa51b42b0c059b654bbb0a4aab17c8b3",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/d516e2f8de435ea78cc6152abc425d3ff2c4d289",
+                "reference": "d516e2f8de435ea78cc6152abc425d3ff2c4d289",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.1.0"
+                "php": ">=5.2"
             },
-            "bin": [
-                "framework/yiic"
-            ],
             "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
+                "files": [
+                    "library/HTMLPurifier.composer.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Edward Z. Yang",
+                    "email": "admin@htmlpurifier.org",
+                    "homepage": "http://ezyang.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Standards compliant HTML filter written in PHP",
+            "homepage": "http://htmlpurifier.org/",
+            "keywords": [
+                "html"
+            ],
+            "time": "2013-02-18 00:04:08"
+        },
+        {
+            "name": "phpspec/php-diff",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpspec/php-diff.git",
+                "reference": "8d82ac415225fac373a4073ba14b1fe286aa2312"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpspec/php-diff/zipball/8d82ac415225fac373a4073ba14b1fe286aa2312",
+                "reference": "8d82ac415225fac373a4073ba14b1fe286aa2312",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Diff": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Boulton",
+                    "homepage": "http://github.com/chrisboulton"
+                }
+            ],
+            "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
+            "time": "2012-11-08 08:55:45"
+        },
+        {
+            "name": "yiisoft/yii2",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-framework.git",
+                "reference": "ecd5b7e5a3283a80a02524bbc81e42aaa6c71e98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ecd5b7e5a3283a80a02524bbc81e42aaa6c71e98",
+                "reference": "ecd5b7e5a3283a80a02524bbc81e42aaa6c71e98",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ezyang/htmlpurifier": "4.5.*",
+                "lib-pcre": "*",
+                "php": ">=5.3.7",
+                "phpspec/php-diff": "1.0.*"
+            },
+            "suggest": {
+                "michelf/php-markdown": "Required by Markdown.",
+                "smarty/smarty": "Required by SmartyViewRenderer.",
+                "twig/twig": "Required by TwigViewRenderer."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "yii\\": "/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
@@ -81,13 +170,57 @@
                     "role": "Core framework development"
                 }
             ],
-            "description": "Yii Web Programming Framework",
+            "description": "Yii2 Web Programming Framework",
             "homepage": "http://www.yiiframework.com/",
             "keywords": [
                 "framework",
                 "yii"
             ],
-            "time": "2013-04-09 16:01:41"
+            "time": "2013-10-06 01:56:06"
+        },
+        {
+            "name": "yiisoft/yii2-composer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-composer.git",
+                "reference": "ad897ede0c6cc747fce802d5a1bc36b0806f0ebe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/ad897ede0c6cc747fce802d5a1bc36b0806f0ebe",
+                "reference": "ad897ede0c6cc747fce802d5a1bc36b0806f0ebe",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "yii\\composer\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com",
+                    "homepage": "http://www.yiiframework.com/",
+                    "role": "Founder and project lead"
+                }
+            ],
+            "description": "The composer integration for the Yii framework",
+            "keywords": [
+                "composer",
+                "install",
+                "update",
+                "yii"
+            ],
+            "time": "2013-10-06 16:14:30"
         }
     ],
     "packages-dev": [
@@ -96,13 +229,14 @@
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "yiisoft/yii": 20
+        "yiisoft/yii2": 20,
+        "yiisoft/yii2-composer": 20
     },
-    "platform": [
-
-    ],
+    "platform": {
+        "php": ">=5.3.0"
+    },
     "platform-dev": [
 
     ]
