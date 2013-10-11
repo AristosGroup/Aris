@@ -476,13 +476,13 @@ class ERestEventListenerRegistry
 		 */
 		$onRest(ERestEvent::MODEL_ATTACH_BEHAVIORS, function($model) {
 			//Attach this behavior to help saving nested models
-			if(!array_key_exists('ERestActiveRecordRelationBehavior', $model->behaviors())) {
+/*			if(!array_key_exists('ERestActiveRecordRelationBehavior', $model->behaviors())) {
 				$model->attachBehavior('ERestActiveRecordRelationBehavior', new ERestActiveRecordRelationBehavior());
 			}
 			
 			if(!array_key_exists('ERestHelperScopes', $model->behaviors())) {
 				$model->attachBehavior('ERestHelperScopes', new ERestHelperScopes());
-			}
+			}*/
 			return $model;
 		});
 
@@ -562,7 +562,7 @@ class ERestEventListenerRegistry
 		 *
 		 * @return (Array) list of relations (Strings) to attach to resources output
 		 */
-		$onRest(ERestEvent::MODEL_WITH_RELATIONS, function($model) {
+/*		$onRest(ERestEvent::MODEL_WITH_RELATIONS, function($model) {
 			$nestedRelations = [];
 			foreach($model->metadata->relations as $rel=>$val)
 			{
@@ -573,7 +573,7 @@ class ERestEventListenerRegistry
 				}
 			}
 			return $nestedRelations;
-		});
+		});*/
 
 		/**
 		 * model.lazy.load.relations
@@ -612,7 +612,7 @@ class ERestEventListenerRegistry
 		 * @return (Array) list of found models
 		 */
 		$onRest(ERestEvent::MODEL_FIND_ALL, function($model) {
-			return $model->findAll();
+			return $model->find();
 		});
 
 		/**
@@ -624,9 +624,9 @@ class ERestEventListenerRegistry
 		 *
 		 * @return (Int) the count of models
 		 */
-		$onRest(ERestEvent::MODEL_COUNT, function($model) {
+/*		$onRest(ERestEvent::MODEL_COUNT, function($model) {
 			return $model->count();
-		});
+		});*/
 
 		/**
 		 * req.data.read

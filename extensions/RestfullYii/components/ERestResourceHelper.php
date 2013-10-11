@@ -99,8 +99,8 @@ class ERestResourceHelper implements iERestResourceHelper
 			return $emitRest(ERestEvent::MODEL_COUNT, $model);
 		} 
 
-		$model = $this->applyScope(ERestEvent::MODEL_LIMIT, $model, 'limit', false);
-		$model = $this->applyScope(ERestEvent::MODEL_OFFSET, $model, 'offset', false);
+	//	$model = $this->applyScope(ERestEvent::MODEL_LIMIT, $model, 'limit', false);
+	//	$model = $this->applyScope(ERestEvent::MODEL_OFFSET, $model, 'offset', false);
 
 		return $emitRest(ERestEvent::MODEL_FIND_ALL, $model);
 	}

@@ -228,8 +228,8 @@ class ERestBehavior extends Behavior
 		} else {
 			$controller = $this;
 		}
-		$controller->layout = 'RestfullYii.views.layouts.json';
-		$controller->render('RestfullYii.views.api.output', $params);
+		$controller->layout = '\app\extensions\RestfullYii\views.layouts.json';
+		$controller->render('app/extensions/RestfullYii/views/api/output', $params);
 	}	
 
 }

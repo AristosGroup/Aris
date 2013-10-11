@@ -15,7 +15,7 @@
  * @version    Release: 1.2.0
  */
 
-namespace app\extensions\RestfullYii\ARBehaviors;
+
 
 
 class ERestActiveRecordRelationBehavior extends EActiveRecordRelationBehavior
