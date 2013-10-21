@@ -1,9 +1,16 @@
 <?php
 return array(
-    'GET api/<controller:\w+>'=>'<controller>/REST.GET',
-    'GET api/<controller:\w+>/<id:\w*>'=>'<controller>/REST.GET',
+
+    'GET api/<controller:\w+>'=>'<controller>/list',
+    'GET api/<controller:\w+>/<id:\w*>'=>'<controller>/view',
     'GET api/<controller:\w+>/<id:\w*>/<param1:\w*>'=>'<controller>/REST.GET',
     'GET api/<controller:\w+>/<id:\w*>/<param1:\w*>/<param2:\w*>'=>'<controller>/REST.GET',
+
+
+/*    'GET api/<controller:\w+>'=>'<controller>/REST.GET',
+    'GET api/<controller:\w+>/<id:\w*>'=>'<controller>/REST.GET',
+    'GET api/<controller:\w+>/<id:\w*>/<param1:\w*>'=>'<controller>/REST.GET',
+    'GET api/<controller:\w+>/<id:\w*>/<param1:\w*>/<param2:\w*>'=>'<controller>/REST.GET',*/
 
    /* array('<controller>/REST.PUT', 'pattern'=>'api/<controller:\w+>/<id:\w*>', 'verb'=>'PUT'),
     array('<controller>/REST.PUT', 'pattern'=>'api/<controller:\w+>/<id:\w*>/<param1:\w*>', 'verb'=>'PUT'),
