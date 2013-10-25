@@ -7,6 +7,10 @@ return array(
     'GET api/<controller:\w+>/<id:\w*>/<param1:\w*>/<param2:\w*>'=>'<controller>/REST.GET',
 
 
+    'PUT api/<controller:\w+>/<id:\w*>'=>'<controller>/update',
+    'POST api/<controller:\w+>'=>'<controller>/create',
+
+
 /*    'GET api/<controller:\w+>'=>'<controller>/REST.GET',
     'GET api/<controller:\w+>/<id:\w*>'=>'<controller>/REST.GET',
     'GET api/<controller:\w+>/<id:\w*>/<param1:\w*>'=>'<controller>/REST.GET',

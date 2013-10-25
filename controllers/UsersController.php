@@ -20,9 +20,15 @@ use app\models\Issue;
 
 
 
-class IssuesController extends Controller {
+class UsersController extends Controller {
 
     public $model = 'app\models\Issue';
+
+
+    protected $users = array(
+        array( 'id'=>1, 'firstname'=>'Aleksey','lastname'=>'Kuznetsov','email'=>'mrakobesov@gmail.com',),
+        array( 'id'=>2, 'firstname'=>'Aleksey','lastname'=>'Stanovoy','email'=>'soccer007@mail.ru',),
+    );
 
  /*   public function behaviors()
     {
@@ -59,29 +65,13 @@ class IssuesController extends Controller {
     public function actionList()
     {
 
+        /**
+         *  { id: 1, firstname: 'Aleksey',lastname: 'Kuznetsov',email:'mrakobesov@gmail.com'},
+        { id: 2,firstname: 'Aleksandr', lastname: 'Stanovoy',email:'soccer007@mail.ru'  }
+         */
 
-        $array = array(
-            'issues'=>array(
-                array('id'=>1,'subject'=>'2jhhu', 'description'=>'asdasd', 'tags'=>array(2,3), 'status'=>2,'assigned_to'=>1,'followers'=>[1,2]),
-                array('id'=>2,'subject'=>'3eerer', 'tags'=>array(1,3), 'status'=>1,'assigned_to'=>2,'followers'=>[1]),
-            )
-        );
 
-        $array['tags']=array(
-            array( 'id'=>1, 'title'=>'Design'),
-            array( 'id'=>2, 'title'=>'Dev'),
-            array( 'id'=>3, 'title'=>'Testing'),
-            array( 'id'=>4, 'title'=>'Верстка'),
-        );
-
-        $array['statuses']=array(
-            array( 'id'=>1, 'name'=>'New'),
-            array( 'id'=>2, 'name'=>'Approve'),
-            array( 'id'=>3, 'name'=>'Testing'),
-            array( 'id'=>4, 'name'=>'In Process'),
-            array( 'id'=>5, 'name'=>'Closed'),
-
-        );
+        $array['users']=$this->users;
 
 
         $result = Json::encode($array);
@@ -92,21 +82,11 @@ class IssuesController extends Controller {
 
     public function actionView($id)
     {
-echo $id;
-        die();
+        $result = Json::encode(array('user'=>$this->users[0])); ;
+        header('Content-type: application/json');
+        echo $result;
     }
 
 
 
-
-    public function actionUpdate($id)
-    {
-    echo $id;
-    }
-
-
-    public function actionCreate()
-    {
-
-    }
 }
